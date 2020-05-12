@@ -1,0 +1,1 @@
+﻿SELECT a.Name from Animal a inner join ZooAnimal za on a.Id = za.AnimalId where Zoo.Id = 1
