@@ -56,6 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Properties\Settings.Designer.cs" />
     <Compile Include="ZooAppDataSet.cs">
       <DependentUpon>ZooAppDataSet.xsd</DependentUpon>
     </Compile>
@@ -90,6 +91,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\Settings.settings" />
     <None Include="ZooAppDataSet.xsc">
       <DependentUpon>ZooAppDataSet.xsd</DependentUpon>
     </None>

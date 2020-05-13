@@ -31,6 +31,7 @@ namespace MasterClass_ZooApp
             string connectionString = ConfigurationManager.ConnectionStrings["MasterClass_ZooApp.Properties.Settings.ZooAppConnectionString1"].ConnectionString;
             sqlConnection = new SqlConnection(connectionString);
             ShowZoos();
+            ShowAllAnimals();
         }
 
         private void ShowZoos()
@@ -93,9 +94,47 @@ namespace MasterClass_ZooApp
 
         }
 
+        private void ShowAllAnimals()
+        {
+            try
+            {
+                string query = "select * from Animal";
+
+                //makes tables usable by c#
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
+
+                using (sqlDataAdapter)
+                {
+                    DataTable allAnimalsTable = new DataTable();
+                    sqlDataAdapter.Fill(allAnimalsTable);
+                    //what information should the listbox show
+                    listAllAnimals.DisplayMemberPath = "Name";
+                    //when a listbox item is selected, what value should be delivered
+                    listAllAnimals.SelectedValuePath = "Id";
+                    //Reference to the deata the listbox should populate
+                    listAllAnimals.ItemsSource = allAnimalsTable.DefaultView;
+                }
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.ToString());
+            }
+            
+        }
+
         private void listZoos_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ShowAssociatedAnimals();
+        }
+
+        private void listAllAnimals_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ShowAllAnimals();
+        }
+
+        private void AddAnimalButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
