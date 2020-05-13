@@ -89,7 +89,7 @@ namespace MasterClass_ZooApp
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.ToString());
+                //MessageBox.Show(e.ToString());
             }
 
         }
@@ -130,6 +130,31 @@ namespace MasterClass_ZooApp
         private void listAllAnimals_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ShowAllAnimals();
+        }
+
+        private void deleteZoo_Click(object sender, RoutedEventArgs e)
+        {
+
+            try
+            {
+                string query = "delete from Zoo where id = @ZooId";
+
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlConnection.Open();
+                sqlCommand.Parameters.AddWithValue("@ZooId", listZoos.SelectedValue);
+                sqlCommand.ExecuteScalar();
+                
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+
+            } finally
+            {
+                sqlConnection.Close();
+                ShowZoos();
+            }
+            
+            
         }
 
         private void AddAnimalButton_Click(object sender, RoutedEventArgs e)

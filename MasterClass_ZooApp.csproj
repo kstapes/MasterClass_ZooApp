@@ -91,7 +91,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="Properties\Settings.settings" />
     <None Include="ZooAppDataSet.xsc">
       <DependentUpon>ZooAppDataSet.xsd</DependentUpon>
     </None>
