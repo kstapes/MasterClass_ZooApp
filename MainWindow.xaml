@@ -11,16 +11,16 @@
         <ListBox Name="listZoos" HorizontalAlignment="Left" Height="169" Margin="10,43,0,0" VerticalAlignment="Top" Width="139" SelectionChanged="listZoos_SelectionChanged"/>
         <Label x:Name="label_Copy" Content="Associated Aninmals List&#xA;" HorizontalAlignment="Left" Margin="180,17,0,0" VerticalAlignment="Top" Height="26" Width="144"/>
         <ListBox x:Name="listAssociatedAnimals" HorizontalAlignment="Left" Height="169" Margin="180,43,0,0" VerticalAlignment="Top" Width="144"/>
-        <ListBox x:Name="listAllAnimals" HorizontalAlignment="Left" Height="245" Margin="374,59,0,0" VerticalAlignment="Top" Width="165" SelectionChanged="listAllAnimals_SelectionChanged"/>
+        <ListBox x:Name="listAllAnimals" HorizontalAlignment="Left" Height="245" Margin="374,48,0,0" VerticalAlignment="Top" Width="165"/>
         <Button x:Name="AddAnimalButton" Content="Add Animal To Zoo" HorizontalAlignment="Left" Margin="374,17,0,0" VerticalAlignment="Top" Width="165" Click="AddAnimalButton_Click" Height="26"/>
         <Button x:Name="button" Content="Delete Zoo" HorizontalAlignment="Left" Margin="10,217,0,0" VerticalAlignment="Top" Width="139" Height="30" Click="deleteZoo_Click"/>
-        <Button x:Name="button_Copy" Content="Remove Animal" HorizontalAlignment="Left" Margin="185,217,0,0" VerticalAlignment="Top" Width="139" Height="30" RenderTransformOrigin="1.361,0.651"/>
-        <Button x:Name="button_Copy1" Content="Add Zoo" HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" Width="139" Height="30"/>
+        <Button x:Name="button_Copy" Content="Remove Animal" HorizontalAlignment="Left" Margin="180,217,0,0" VerticalAlignment="Top" Width="144" Height="30" RenderTransformOrigin="1.361,0.651"/>
+        <Button x:Name="button_Copy1" Content="Add Zoo" HorizontalAlignment="Left" Margin="10,308,0,0" VerticalAlignment="Top" Width="139" Height="30"  Click="AddZoo_Click"/>
         <Button x:Name="button_Copy2" Content="Update Zoo" HorizontalAlignment="Left" Margin="10,343,0,0" VerticalAlignment="Top" Width="139" Height="30"/>
         <Button x:Name="button_Copy3" Content="Add Animal Zoo" HorizontalAlignment="Left" Margin="180,308,0,0" VerticalAlignment="Top" Width="139" Height="30" RenderTransformOrigin="1.361,0.651" />
         <Button x:Name="button_Copy4" Content="Update Animal" HorizontalAlignment="Left" Margin="180,343,0,0" VerticalAlignment="Top" Width="139" Height="30" RenderTransformOrigin="1.361,0.651" />
-        <Button x:Name="button_Copy5" Content="Delete Animal" HorizontalAlignment="Left" Margin="374,309,0,0" VerticalAlignment="Top" Width="165" Height="30" RenderTransformOrigin="1.361,0.651" />
-        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="51" Margin="10,252,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="309"/>
+        <Button x:Name="button_Copy5" Content="Delete Animal" HorizontalAlignment="Left" Margin="375,308,0,0" VerticalAlignment="Top" Width="165" Height="30" RenderTransformOrigin="1.361,0.651" />
+        <TextBox x:Name="myTextBox" HorizontalAlignment="Left" Height="51" Margin="10,252,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="309"/>
 
     </Grid>
 </Window>
